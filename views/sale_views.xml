@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+    <record id="view_product_form_posnumber" model="ir.ui.view">
+            <field name="name">sale.view_order_form.inherit.posnumber</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/notebook/page/field[@name='order_line']/tree/field[@name='product_id']" position="before">
+                    <field name="sequence"/>
+                </xpath>
+            </field>
+        </record>
+</odoo>
